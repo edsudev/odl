@@ -1,0 +1,182 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - odl</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+ 
+
+</head>
+<style>
+    /* Custom CSS to enable dropdown on hover with transition effect */
+    .navbar .nav-item.dropdown .dropdown-menu {
+        opacity: 0;
+        visibility: hidden;
+        display: block; /* Add this line to override Bootstrap's default display property */
+        transition: opacity 0.3s ease, visibility 0s linear 0.3s;
+    }
+
+    .navbar .nav-item.dropdown:hover .dropdown-menu {
+        opacity: 1;
+        visibility: visible;
+        transition-delay: 0s;
+    }
+
+    .navbar-nav {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    /* Optional: Space around the list items for more visual separation */
+    .nav-item {
+        margin: 0 10px;
+    }
+    footer{
+        background-color: #203B93;
+    }
+    /* Fixed Navbar with White Background */
+    .navbar {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height:80px;
+        z-index: 100;
+        background-color: #fff; /* Set the background color to white */
+    }
+
+    /* Border line under Navbar */
+    .navbar {
+        border-bottom: 1px solid #ddd;
+    }
+
+    /* Padding to space the content from the top of the navbar */
+    body {
+        padding-top: 70px;
+    }
+
+
+</style>
+
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid p-3">
+                <!-- Add justify-content-between and align-items-center -->
+                <div class="mx-auto">
+                    <!-- This div will contain "Your Brand" -->
+                    <a class="navbar-brand" href="#"><img src="https://www.edouniversity.edu.ng/portal/images/nav/logo%201.png" /></a>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-around" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link text-black" href="#">HOME</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-black" href="#">ABOUT</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <!-- Dropdown Menu -->
+                            <a class="nav-link dropdown-toggle text-black" href="#" id="servicesDropdown" role="button"
+                               data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                ADMISSION
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="servicesDropdown">
+                                <a class="dropdown-item" href="#">REQUIREMENTS</a>
+                                <a class="dropdown-item" href="#">APPLY NOW</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-black" href="https://www.edouniversity.edu.ng">MAIN UNIVERSITY</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-black" href="#">CONTACT</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-black" href="#">GALLERY</a>
+                        </li>
+                    </ul>
+                    <partial name="_LoginPartial" />
+                </div>
+            </div>
+        </nav>
+
+
+    </header>
+    <div >
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="text-light py-4">
+        <div class="container ">
+            <div class="row">
+                <div class="col-md-4">
+                    <p>"The vision of Edo State University Uzairue,(formerly Edo University Iyamho),
+                        is to become a centre of excellence in quality teaching,
+                        research, innovations and community development."</p>
+                </div>
+                <div class="col-md-4">
+                    <h4>Contact Us</h4>
+                    <span>Edo State University, Uzairue.</span>
+                    <span> Km7, Auchi-Abuja Road, Iyamho-Uzairue Edo State, Nigeria</span>
+                    <span>Email: registrar@edouniversity.edu.ng</span>
+                    <span>Phone: 08064888518,08065528915, 09025412171, 07012641913</span>
+                </div>
+                <div class="col-md-2">
+                    <h4>Useful Links</h4>
+                    <ul class="list-unstyled">
+                        <li><a class="text-light" href="#">Home</a></li>
+                        <li><a class="text-light" href="#">About</a></li>
+                        <li><a class="text-light" href="#">Admissions</a></li>
+                        <li><a class="text-light" href="#">Academics</a></li>
+                        <li><a class="text-light" href="#">Student Life</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <h4>Follow Us</h4>
+                    <ul class="list-inline">
+                        <li class="list-inline-item"><a class="text-light" href="#"><i class="fab fa-facebook-f"></i></a></li>
+                        <li class="list-inline-item"><a class="text-light" href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li class="list-inline-item"><a class="text-light" href="#"><i class="fab fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        
+    </footer>
+    <div class="text-center footer-2 bg-secondary p-3">
+        &copy; @DateTime.Now.Year All Rights Reserved Edo State University Uzairue - Open and Distance Learning.
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+    // JavaScript for countdown timer
+    function updateCountdown() {
+        const endDate = new Date('2023-08-31 00:00:00'); // Change this to the actual end date
+        const now = new Date().getTime();
+        const timeLeft = endDate - now;
+
+        const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+        document.getElementById('countdown-timer').innerText = `Admission process starts in ${days} days, ${hours} hours, ${minutes} minutes, and ${seconds} seconds.`;
+    }
+
+    // Update the countdown every second
+    setInterval(updateCountdown, 1000);
+</script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,279 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<style>
+    /* Custom CSS for a fixed height for carousel images */
+    #carouselExampleControls img {
+        max-height: 700px; /* Set the desired height in pixels */
+        object-fit: cover; /* Maintain aspect ratio and cover the entire container */
+    }
+
+    /* Custom CSS for transparent card on carousel images */
+    .carousel-caption {
+        position: absolute;
+        top: 50%;
+        right: 20px; /* Adjust the right spacing as needed */
+        left: auto; /* Reset left to avoid conflicts */
+        background-color: rgba(0, 0, 0, 0.6); /* Set the transparency here (0 to 1) */
+        padding: 20px;
+        color: white;
+        text-align: center;
+        width: 30%; /* Adjust the width as needed */
+        transform: translateY(-50%);
+    }
+
+    .carousel-caption {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        bottom: 10px;
+        height: 100%;
+        text-align: center;
+    }
+
+    .admission-card {
+        max-width: 500px; /* Adjust the width as needed */
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        text-align: center;
+        background-color: #f8f8f8;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .about-image {
+        max-width: 70%;
+        height: auto;
+    }
+    .icon{
+        width: 50px;
+        height: 50px;
+    }
+
+    .card-img-top {
+        height: 200px; /* Adjust this height as needed */
+        object-fit: cover;
+    }
+
+    .tour {
+        width: 85%;
+        margin: auto;
+        margin-top: 4rem;
+        margin-bottom: 100px;
+    }
+
+        .tour .tour-text h2 {
+            font-family: 'Oswald', sans-serif;
+            font-weight: bold;
+            color: #06040A;
+            text-align: center;
+        }
+
+        .tour .tour-video iframe {
+            display: block;
+            width: 100%;
+            height: 300px;
+            border-radius: 10px;
+            margin: 25px auto 0 auto;
+        }
+
+   .stay-tuned-section {
+    background-color: #f9f9f9;
+    padding: 50px 0;
+}
+
+.section-title {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.section-subtitle {
+    font-size: 20px;
+    color: #555;
+}
+
+/* Countdown timer styles */
+.countdown-timer {
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+
+</style>
+
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="~/images/bg2.JPG" class="d-block w-100" alt="Carousel Slide 2">
+                <div class="carousel-caption">
+                    <h3>
+                        ADMISSION INTO OPEN AND DISTANCE LEARNING (ODL) DEGREE
+                        PROGRAMMES FOR THE 2023/2024 ACADEMIC SESSION
+                    </h3>
+                    <p>
+                        Applications are hereby invited from qualified candidates into the ODL Bachelor’s Degree Programmes in the Open and Distance Learning Centre of Ladoke Akintola University of Technology, Ogbomoso for the 2023/2024 Academic Session.
+
+                    </p><br />
+                    <h2>IMPORTANT NOTICE ON ADMISSION REQUIREMENTS</h2>
+                    <p>Candidates who participated in the 2023/2024 UTME examination and scored 180 and above may also be considered for admission irrespective of their choice of institution.</p>
+                    <button class="btn btn-outline-primary">Learn More</button>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="~/images/bg1.JPG" class="d-block w-100" alt="Carousel Slide 3">
+                <div class="carousel-caption">
+                    <h1>There's no limit to what you<br /> can achieve from anywhere!</h1>
+
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="~/images/bg1.JPG" class="d-block w-100" alt="Carousel Slide 3">
+                <div class="carousel-caption">
+                    <h1>Learn Anywhere</h1>
+                    <h1>Learn Anytime</h1>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+     <section class="container">
+    <div class="container mt-5">
+        <div class="row">
+            <!-- First Card -->
+            <div class="col-md-6">
+                <div class="card">
+                    
+                    <div class="card-body">
+                        <h5 class="card-title">About EDSU ODL</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce nec maximus velit. Nullam sit amet eros et mauris hendrerit tempus.</p>
+                        <a href="#" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Second Card -->
+            <div class="col-md-6">
+                <div class="card">
+                   
+                    <div class="card-body">
+                        <h5 class="card-title">About Canvas LMS</h5>
+                        <p class="card-text">Phasellus mollis libero ut libero iaculis, at dictum nisi fermentum. Aenean vel sapien et tortor luctus dignissim ac nec justo.</p>
+                        <a href="#" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr />
+    <div class="tour">
+        <div class="tour-text">
+            <h2>Take a Tour</h2>
+        </div>
+
+        <div class="tour-video">
+            <iframe src="https://www.youtube.com/embed/8hRMz-CXL28"
+                    title="Aerial Tour of Campus 1 Edo State University Uzairue."
+                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+            gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+        </div>
+    </div>
+
+
+    <div class="container my-5">
+        <h2 class="my-3">Our Programme</h2>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="https://cdn.pixabay.com/photo/2013/11/24/11/10/lab-217074_1280.jpg" class="card-img-top" alt="Image 1">
+                    <div class="card-body">
+                        <p class="card-text">MICROBIOLOGY</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="https://cdn.pixabay.com/photo/2015/10/31/11/59/financial-equalization-1015280_1280.jpg" class="card-img-top" alt="Image 5">
+                    <div class="card-body">
+                        <p class="card-text">ECONOMICS</p>
+                    </div>
+                </div>
+            </div>
+           
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="https://cdn.pixabay.com/photo/2020/07/27/13/44/princeton-5442480_1280.jpg" class="card-img-top" alt="Image 3">
+                    <div class="card-body">
+                        <p class="card-text">HISTORY & INT'L STUDIES</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="https://cdn.pixabay.com/photo/2017/09/05/10/08/office-2717014_1280.jpg" class="card-img-top" alt="Image 4">
+                    <div class="card-body">
+                        <p class="card-text">ACCOUNTING</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="https://cdn.pixabay.com/photo/2017/10/10/21/46/laptop-2838917_1280.jpg" class="card-img-top" alt="Image 2">
+                    <div class="card-body">
+                        <p class="card-text">COMPUTER SCIENCE</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="https://cdn.pixabay.com/photo/2014/11/04/08/07/mark-516279_1280.jpg" class="card-img-top" alt="Image 6">
+                    <div class="card-body">
+                        <p class="card-text">BUSINESS ADMINISTRATION</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="https://cdn.pixabay.com/photo/2017/07/20/09/31/system-2521728_1280.jpg" class="card-img-top" alt="Image 7">
+                    <div class="card-body">
+                        <p class="card-text">MASS COMMUNICATION</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="https://cdn.pixabay.com/photo/2018/04/18/18/47/hands-3331216_1280.jpg" class="card-img-top" alt="Image 8">
+                    <div class="card-body">
+                        <p class="card-text">POL. SCIENCE & PUB. ADMIN</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="stay-tuned-section" id="coming-soon">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8 text-center">
+                    <h2 class="section-title">Stay Tuned</h2>
+                    <p class="section-subtitle">Admission process will begin soon</p>
+                    <div id="countdown-timer" class="countdown-timer"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+ </section>  
